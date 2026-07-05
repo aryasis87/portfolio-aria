@@ -8,10 +8,10 @@ import ThemeToggle from "@/components/ThemeToggle";
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const spaceGrotesk = Space_Grotesk({ variable: "--font-space-grotesk", subsets: ["latin"], weight: ["400", "500", "700"] });
 
-const __jsonld = {"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"Aria","jobTitle":"Creative Developer & Designer","url":"https://portfolio-aria.vercel.app","inLanguage":"en"}};
+const __jsonld = {"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"Aria","jobTitle":"Creative Developer & Designer","url":"https://aria.pintuweb.com","inLanguage":"en"}};
 
 export const metadata = {
-  metadataBase: new URL("https://portfolio-aria.vercel.app"),
+  metadataBase: new URL("https://aria.pintuweb.com"),
   title: "Aria — Creative Developer & Designer",
   description: "Portfolio of Aria, a creative developer crafting immersive, futuristic web experiences with motion, 3D, and interaction design.",
   applicationName: "Aria",
@@ -19,11 +19,11 @@ export const metadata = {
   authors: [{ name: "Aria" }],
   creator: "Aria",
   publisher: "Aria",
-  alternates: { canonical: "https://portfolio-aria.vercel.app" },
+  alternates: { canonical: "https://aria.pintuweb.com" },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://portfolio-aria.vercel.app",
+    url: "https://aria.pintuweb.com",
     siteName: "Aria",
     title: "Aria — Creative Developer & Designer",
     description: "Portfolio of Aria, a creative developer crafting immersive, futuristic web experiences with motion, 3D, and interaction design.",
