@@ -8,9 +8,38 @@ import ThemeToggle from "@/components/ThemeToggle";
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const spaceGrotesk = Space_Grotesk({ variable: "--font-space-grotesk", subsets: ["latin"], weight: ["400", "500", "700"] });
 
+const __jsonld = {"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"Aria","jobTitle":"Creative Developer & Designer","url":"https://portfolio-aria.vercel.app","inLanguage":"en"}};
+
 export const metadata = {
+  metadataBase: new URL("https://portfolio-aria.vercel.app"),
   title: "Aria — Creative Developer & Designer",
-  description: "Portfolio of Aria, a creative developer crafting immersive, futuristic web experiences.",
+  description: "Portfolio of Aria, a creative developer crafting immersive, futuristic web experiences with motion, 3D, and interaction design.",
+  applicationName: "Aria",
+  keywords: ["creative developer", "portfolio", "web designer", "interaction design", "frontend developer"],
+  authors: [{ name: "Aria" }],
+  creator: "Aria",
+  publisher: "Aria",
+  alternates: { canonical: "https://portfolio-aria.vercel.app" },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://portfolio-aria.vercel.app",
+    siteName: "Aria",
+    title: "Aria — Creative Developer & Designer",
+    description: "Portfolio of Aria, a creative developer crafting immersive, futuristic web experiences with motion, 3D, and interaction design.",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Aria — Creative Developer & Designer" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Aria — Creative Developer & Designer",
+    description: "Portfolio of Aria, a creative developer crafting immersive, futuristic web experiences with motion, 3D, and interaction design.",
+    images: ["/og.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -30,7 +59,8 @@ export default function RootLayout({ children }) {
           <Footer />
           <ThemeToggle />
         </ThemeProvider>
-      </body>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(__jsonld) }} />
+        </body>
     </html>
   );
 }
