@@ -27,7 +27,7 @@ export default function AboutPage() {
             <div className="mt-5 space-y-4 leading-relaxed text-white/60">
               {profile.bio.map((p, i) => <p key={i}>{p}</p>)}
             </div>
-            <Link href="#" className="mt-7 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-fuchsia-500 px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90">
+            <Link href="/contact" className="mt-7 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-fuchsia-500 px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90">
               <Download size={16} /> Download CV
             </Link>
           </Reveal>
