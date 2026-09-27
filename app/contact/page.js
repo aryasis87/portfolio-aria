@@ -36,8 +36,8 @@ export default function ContactPage() {
             {sent ? (
               <div className={`${glass} p-10 text-center`}>
                 <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-r from-indigo-500 to-fuchsia-500 text-white"><Check size={28} /></div>
-                <h2 className="mt-4 text-2xl font-bold text-white">Message sent!</h2>
-                <p className="mt-1 text-white/60">Thanks, {form.name}. I’ll reply to {form.email} soon.</p>
+                <h2 className="mt-4 text-2xl font-bold text-white">Thanks for trying the form!</h2>
+                <p className="mt-1 text-white/60">This is a portfolio template, {form.name}, so your message wasn’t actually sent. In a live version, it lands straight in the owner’s inbox.</p>
                 <button onClick={() => { setSent(false); setForm({ name: '', email: '', message: '' }); }} className="mt-6 rounded-full border border-white/15 px-6 py-2.5 text-sm font-semibold text-white/80 transition hover:bg-white/5">Send another</button>
               </div>
             ) : (
