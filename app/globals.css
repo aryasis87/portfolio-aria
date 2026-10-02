@@ -43,15 +43,23 @@ body {
 
 :focus-visible { outline: 2px solid #818cf8; outline-offset: 2px; border-radius: 6px; }
 
+/* Batas keterbacaan: label putih transparan di atas kaca gelap tetap >= 4.5:1.
+   Di dalam lapisan utilities supaya hover:/group-hover: tetap bisa menimpanya. */
+@layer utilities {
+  .text-white\/40 { color: rgb(255 255 255 / 0.62); }
+  .text-white\/50 { color: rgb(255 255 255 / 0.66); }
+  .text-white\/60 { color: rgb(255 255 255 / 0.72); }
+}
+
 /* ---- Light theme (base is dark glass; flip whites, gradient accents kept) ---- */
 .light { color-scheme: light; }
 .light body { background-color: #f4f4fb !important; color: #16161f !important; }
 .light .text-white { color: #16161f !important; }
-.light .text-white\/80 { color: rgba(22,22,31,0.82) !important; }
-.light .text-white\/70 { color: rgba(22,22,31,0.72) !important; }
-.light .text-white\/60 { color: rgba(22,22,31,0.6) !important; }
-.light .text-white\/50 { color: rgba(22,22,31,0.5) !important; }
-.light .text-white\/40 { color: rgba(22,22,31,0.42) !important; }
+.light .text-white\/80 { color: rgba(22,22,31,0.84) !important; }
+.light .text-white\/70 { color: rgba(22,22,31,0.78) !important; }
+.light .text-white\/60 { color: rgba(22,22,31,0.74) !important; }
+.light .text-white\/50 { color: rgba(22,22,31,0.7) !important; }
+.light .text-white\/40 { color: rgba(22,22,31,0.66) !important; }
 .light .bg-white\/5 { background-color: rgba(15,15,35,0.04) !important; }
 .light .bg-white\/10 { background-color: rgba(15,15,35,0.06) !important; }
 .light .border-white\/10 { border-color: rgba(15,15,35,0.10) !important; }

@@ -5,7 +5,7 @@ import PageHeader from '@/components/PageHeader';
 import Reveal from '@/components/ui/Reveal';
 import { profile, skills, experience, education } from '@/lib/data';
 
-export const metadata = { title: 'About — Aria' };
+export const metadata = { title: 'About' };
 const glass = 'rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl';
 
 export default function AboutPage() {
@@ -18,7 +18,7 @@ export default function AboutPage() {
           <Reveal>
             <div className={`${glass} relative mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden p-2`}>
               <div className="relative h-full w-full overflow-hidden rounded-xl">
-                <Image src={profile.avatar} alt={profile.name} fill sizes="(max-width:768px) 100vw, 40vw" className="object-cover" />
+                <Image src={profile.about} alt="" fill sizes="(max-width:768px) 100vw, 40vw" className="object-cover" />
               </div>
             </div>
           </Reveal>
@@ -27,7 +27,7 @@ export default function AboutPage() {
             <div className="mt-5 space-y-4 leading-relaxed text-white/60">
               {profile.bio.map((p, i) => <p key={i}>{p}</p>)}
             </div>
-            <Link href="/contact" className="mt-7 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500 to-fuchsia-500 px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90">
+            <Link href="/contact" className="mt-7 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-600 to-fuchsia-600 px-6 py-3 text-sm font-semibold text-white transition hover:opacity-90">
               <Download size={16} /> Download CV
             </Link>
           </Reveal>

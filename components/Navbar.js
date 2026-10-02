@@ -26,7 +26,7 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
-          <Link href="/contact" className="rounded-full bg-gradient-to-r from-indigo-500 to-fuchsia-500 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-fuchsia-500/20 transition hover:opacity-90">
+          <Link href="/contact" className="rounded-full bg-gradient-to-r from-indigo-600 to-fuchsia-600 px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-fuchsia-500/20 transition hover:opacity-90">
             Contact
           </Link>
         </div>

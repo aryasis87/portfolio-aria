@@ -8,12 +8,12 @@ import ThemeToggle from "@/components/ThemeToggle";
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const spaceGrotesk = Space_Grotesk({ variable: "--font-space-grotesk", subsets: ["latin"], weight: ["400", "500", "700"] });
 
-const __jsonld = {"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"Aria","jobTitle":"Creative Developer & Designer","url":"https://portfolio-aria-pearl.vercel.app","inLanguage":"en"}};
+const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"Aria — Creative Developer & Designer","description":"Portfolio template for Aria, a fictional creative developer: dark, cinematic case studies that link to six live demo sites, plus articles on motion, contrast, and small algorithms.","inLanguage":"en"};
 
 export const metadata = {
   metadataBase: new URL("https://portfolio-aria-pearl.vercel.app"),
-  title: "Aria — Creative Developer & Designer",
-  description: "Portfolio of Aria, a creative developer crafting immersive, futuristic web experiences with motion, 3D, and interaction design.",
+  title: { default: "Aria — Creative Developer & Designer", template: "%s — Aria" },
+  description: "Portfolio template for Aria, a fictional creative developer: dark, cinematic case studies that link to six live demo sites, plus articles on motion, contrast, and small algorithms.",
   applicationName: "Aria",
   keywords: ["creative developer", "portfolio", "web designer", "interaction design", "frontend developer"],
   authors: [{ name: "Aria" }],
@@ -26,13 +26,13 @@ export const metadata = {
     url: "https://portfolio-aria-pearl.vercel.app",
     siteName: "Aria",
     title: "Aria — Creative Developer & Designer",
-    description: "Portfolio of Aria, a creative developer crafting immersive, futuristic web experiences with motion, 3D, and interaction design.",
+    description: "Portfolio template for Aria, a fictional creative developer: dark, cinematic case studies that link to six live demo sites, plus articles on motion, contrast, and small algorithms.",
     images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Aria — Creative Developer & Designer" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Aria — Creative Developer & Designer",
-    description: "Portfolio of Aria, a creative developer crafting immersive, futuristic web experiences with motion, 3D, and interaction design.",
+    description: "Portfolio template for Aria, a fictional creative developer: dark, cinematic case studies that link to six live demo sites, plus articles on motion, contrast, and small algorithms.",
     images: ["/og.jpg"],
   },
   robots: {
@@ -44,8 +44,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}>
+    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`} suppressHydrationWarning>
+      <body className="antialiased">
         <ThemeProvider>
           {/* Ambient aurora background */}
           <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">

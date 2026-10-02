@@ -32,10 +32,8 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wide text-white/40">Find me on</p>
-            <ul className="mt-3 space-y-2">
-              {profile.socials.map((s) => <li key={s.label}><a href={s.href} target="_blank" rel="noopener noreferrer" className="text-sm text-white/60 transition hover:text-white">{s.label}</a></li>)}
-            </ul>
+            <p className="text-sm font-semibold uppercase tracking-wide text-white/40">About this site</p>
+            <p className="mt-3 text-sm opacity-80">A portfolio template with a fictional persona. Every project links to a live demo site; there are no real clients or testimonials here.</p>
           </div>
         </div>
 
